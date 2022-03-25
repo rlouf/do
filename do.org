@@ -1,0 +1,251 @@
+#+TITLE: Doing Things
+#+AUTHOR: Rémi Louf
+#+EMAIL: sample@thetypicalset.com
+#+STARTUP: content hideblocks
+#+LANGUAGE: en
+#+OPTIONS: toc:2 num:nil html-postamble:nil
+
+* Context
+
+There are a few general tricks when it comes to organization, but many details only make sense in context. So let me briefly introduce my context. I am a glorified statistician (aka data scientist) working as a consultant; I am also generally curious and have wildly divergent interests. My main tasks during a typical day include reading (online and offline), development and writing prose.
+
+As of April 2022, I am currently involved in several open source projects ([[https://github.com/blackjax-devs/blackjax][Blackjax]], [[https://github.com/aesaera-devs/aehmc][Aehmc]] and [[https://github.com/aesara-devs/aemcmc][Aemcmc]]), in an electoral statistics project and podcast ([[https://twitter.com/pollsposition][Pollsposition]]), I regularly publish notes on economics and politics ([[https://www.ddoxa.fr][Ddoxa]]) and update my [[https://www.thetypicalset.com][knowledge graph]]. I am writing up this document and a book about MCMC samplers. Traditional TODO lists fail when you get to this point.
+
+* Doing things
+
+I have come across David Allen's book /Getting things done/ for the first time when I was a PhD student. I read the book several times, but I never quite managed to make it stick. Most activities I'm involved in are creative: they are loosely defined and cannot always be given a timeline.
+There's also a /grind/ connotation to the expression "get things done" which never really worked with me, as if we could only get satisfaction from the fact of having accomplished tasks. I called this /Doing things/ because you should never leave the pleasure of simply doing things out sight. Doing the right thing at the right time without having to think about anything else will bring back the pleasure of doing.
+
+There is also a mix of offline and online: most of my reading happens offline, but I take notes with my computer. I have most of my ideas when I'm not at the computer, but am typically in front of a computer when am in execution mode.
+
+Every tutorial I have read about how to implement GTD with Emacs stop at the boundary with Emacs. You cannot, however, =org-capture= in the middle of a forest walk, when reading a book or talking with your spouse. And from experience, many attemps at implementing GTD fail because they treat the technological solution (Emacs) as an end, and do not consider /how to get things in and out of Emacs/. I would typically end with hand-written lists, emails sent to myself, a couple of todos in an app and a /really messy/ org file. There were many duplicates; many things still managed to fall through.
+
+Before going any further, one word of wisdom:
+
+#+begin_quote
+If you are reading this and feeling overwhelmed, seriously consider the possibility that you may be on the verge of burnout. In this case a new organization system is not going to help. Dotfiles cannot make a miserable situation magical.
+#+end_quote
+
+As stated above, a good system allows me to move on many projects concurrently. But if I didn't have the system I wouldn't feel /miserable/, I would probably be slightly frustrated (knowing it's inefficient), but otherwise not much would change.
+
+It is totally possible to /give the impression/ that you are working on several things at a time to an outisde observer that checks in every week or so, which typically is what other people expect from us. It is however impossible to work on several things /at the same time/ in such obvious ways that I am not even going to source this claim. You can only be efficient when the task at hand is the only thing lingering in your mind, and that's especially true for creative workers (and remember software development is software /carpentry/). You must thus *delegate* everything else to an external system:
+
+- *Herding* passing thoughts. While working new thoughts should imprint as litte as possible. The thought capturing system should be as fluid and fast as possible so you can immediately forget about this new thought and go back to the task at hand. Meditation really clicked to me the day an instructor described the process not as trying /not to think/ but instead as witnessing thoughts and, barely ackowledging their presence, redirecting them towards a bin: you usually do not *need* to act on your thoughts. It is also true here. Capturing your thoughts effortlessly and delegating processing to a later date gives the same sense of liberation as meditation does when truly mastered. A sign that a capturing system is efficient is that you only end following through with a few items; this usually means thoughts went to the inbox unfiltered. Now is not the time to censor, to filter, it is the time to let go and store in the inbox. Many developers are after the mythical /flow/; it is usually achieved when fully immersed in the task to the point where nothing else comes to mind. A permanent state of flow can be achieved, but it requires a form of grace with capture.
+- *Scheduling* what to do. Constantly steering the ship, having to decide at each step what you are going to do next,  is going to exhaust you emotionally intellectually. Paradoxically you will end up avoiding making decisions and will end up moving in a random walk. On the other hand, and that's particularly true with creative jobs, you cannot plan too long ahead. You will have to find your own scheduling granularity. Scheduling happens during *Reviews*. I have a /strategic review/ every week and /tactic reviews / once a day. Were I spinning less wheels strategic meetings would probably be held on a fortnightly or monthly basis for work.
+  When it comes to elaborating on my notes, since it does not matter which I pick every day (I am equally interested in every topic), I delegate the choice (which can be emotionally draining) to the computer.
+
+I will go through my process step-by-step and mostly explain how one can implement it one step at a time.
+
+#+begin_comment
+An organization system is a /reminding/ system. When I send TODOs to my mailbox it is because I know I will look at my mailbox during the day, the same way when I pile the outgoing mail in front of the door because I know I'll have to open the door the next day. Some people use /reminders/ to schedule their days. Some use their /calendar/, a big reminding machine. We /herding/: /capturing/ and /reminding/ when appropriate.
+#+end_comment
+
+For the system to work it needs to have both the correct /user interface/ and the correct /internals/. What's unusual is that you power the backend, BUT need to pretend you do not know what the backend has in for you in the near future.
+
+*Think about the backend you being yourself bossing you around*.
+
+* User Interface
+** Herding
+
+#+begin_comment
+It is useful to pause and think about the big picture of what we are trying to achieve here. Ultimately of all these thoughts passing through your head some will be discarded immediately, some will seem worthy but get lost, some will be abandonned after some work possibly breeding new ideas, and only a few will lead to something.
+---> How I can integrate the digital garden activity with this.
+#+end_comment
+
+David Allen recommends in his book to do everything in one sitting, but I'd advise getting some of the parts like capturing right before focusing on everything else. Once herding has become a habit and I know where to find the stuff that needs to be done. People usually understand the advantage of *capturing* thoughts quickly. Writing things down is already a habit for most people, and it is just a matter of adding this habit to when you're working. What typically happens to people around me is that they'll end up having a few emails with TODOs, a couple of items in a dedicated app, phone reminders, loose notes, vocal notes, etc. The first step when building a review habit is consolidating the inboxes. By that I mean a sort of meta-inbox (or two), a schedule and frictionless process.
+
+#+begin_src ascii
+ * TODO
+    /Captured on: 2022-03-02/
+#+end_src
+
+** Reminding
+* The backend
+** Maintenance
+** Spaced repetition
+
+Project I do not have full agency over (because I have a sort of deadline) cannot go into the spaced repetition system. Typically writing down thoughts, expanding my digital garden, blog posts, etc go there.
+
+I steup time in the calendar and the computer fills it in.
+
+Digital garden --> Prompt random articles until marked as done
+Blog --> Blog random until marked as published
+* Time
+
+I have an embargo on news, communication, etc. until I am done with my writing session. Otherwise I am getting other people's voice in my head and that's adding noise, unwanted noise. More generally, I consider "feeds" as streams of thoughts that I can open or close as I see fit. Sometimes I need space to explore my own ideas.
+
+* Move from stable state to stable state
+
+You should always aim to work like a ratchet wheel.
+
+Always end a work session in an executable or exportable state. It's ok to step over the alotted time to make sure you are such a state. The first steps of a new project will actually be to make sure you are in an exportable / runnable state. If you find yourself ending most sessions in a broken states there are only two possibilities: you fraction your time too much, or you try to cram too much in one session. It is much better to finish your day 30 minutes early in a stable state than try to cram as much as possible in the last 30 mins.
+
+/Adapt/ your workflow to make it possible.
+
+** References
+
+- Jesper Andersen [[https://jlouis.github.io/posts/how-to-build-stable-systems/][How to build stable systems]]
+
+* Use your calendar
+
+I use my calendar to carve out time for everything /that is not work/, and by that I mean stuff that I don't get paid to do. That includes not only things that need to happen at a given time:
+
+- Appointments
+- Exercise (I play tennis, so it's equivalent to a meeting)
+- Getting the kids from school
+
+But also, most importantly, for stuff that doesn't *need* to happen but that you would like to happen nevertheless:
+
+- Reading (~30 mins in morning possibly more in evening)
+- Writing (~1h / day)
+- Open Source
+- Other project that involves development.
+
+The function of the calendar here is to *allow* me to do these things. Otherwise whenever I feel a bit rushed at work these things will not get done. With this system I know that I can do all this AND work between 40 and 50 hours a week. It's all planned. I can also work around what I know to be the most appropriate time for each activity. For instance, my optimal schedule is to read a little, then I'm most productive writing, then once my head is empty it's my best time to tackle complex problems at work. Then exercise/have lunch with my wife or a friend to get some energy back and go back to work. But that's me and I suggest you play around and experiment with this; and follow your instincts.
+
+Calendar is also good for something you tend to procrastinate on, for me that's errands. Your manager schedules them in your calendar, your executing self has no choice.
+
+Use your calendar as your boss: to *allow* yourself to do something else than work and to *push you* to do things you are reluctant to do. Think of the calendar as setting the groundwork for everything else. It allows separation of tasks at a very high level. It removes a huge cognitive barrier for me. Otherwise I would always be wondering if I'd been working on personal projects too much, most of the time ended up over-working due to sheer stress.
+
+** References
+
+- [[https://www.forbes.com/sites/kevinkruse/2016/12/12/throw-out-your-to-do-list-fix-your-calendar-double-your-productivity/?sh=686a9cbf49f2][Throw out you todo list, fix your calendar, double your productivity]]
+- [[https://www.nirandfar.com/todo-vs-schedule-builder/][Be a Schedule Builder, Not a To-Do List Maker]]
+- [[https://hbr.org/2012/01/to-do-lists-dont-work][Todo lists won't work]]
+
+* Conclusion
+
+Which should be a step towards the pleasure of being, but this is out of scope for a writeup on organization methods.
+
+
+* My implementation
+I use Emacs' incredible Org mode to power most of the backend we discussed earlier
+** Redirecting tasks
+
+#+begin_src elisp
+(setq org-directory "~/org/")
+#+end_src
+
+One of the most important tools in our organization toolbox is the ability to capture all the thoughts that come to mind, so quickly that the work is not interrupted. This is worth fine-tuning to an extreme. Let us first define an elementary capture template:
+
+#+begin_src elisp
+(setq org-capture-templates
+    `(("i" "Inbox" entry (file "inbox.org")  "* TODO %?")))
+#+end_src
+
+This saves tasks to =inbox.org=. Doom emacs binds =org-capture= to =<SPC> X= but I do not particularly like it, so I bind it to the more classic =C-c c=:
+
+#+begin_src elisp
+(define-key global-map (kbd "C-c c") 'org-capture')
+#+end_src
+
+Capturing is something that we have to do very often so we'll define a simple keyboard shortcut =C-c i=:
+
+#+begin_src elisp
+(defun my/org-capture-inbox ()
+  (interactive)
+  (call-interactively 'org-store-link)
+  (org-capture nil "i"))
+
+(define-key global-map (kbd "C-c i") 'my/org-capture-inbox')
+#+end_src
+
+So that when I press =C-c i= anywhere in emacs I am prompted the following capture window:
+
+#+begin_src org
+,*Capture buffer. Finish 'C-c C-c', refile 'C-c C-w', abort 'C-c C-k'.*
+,* TODO |
+#+end_src
+
+** The life of a TODO
+
+Captured items are all in a *TODO* state, completed tasks are in the terminal *DONE* state. It is useful to define other, non terminal, states. *NEXT* expresses, in each project, which task is to be completed next. *HOLD* which task is currently on hold. *WAIT* which tasks are waiting for someone else's input (or has been delegated).
+
+#+begin_src elisp
+; Setting the state to HOLD or CANCELLED will prompt for a note.
+(setq org-todo-keywords
+     '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
+       (sequence "HOLD(h@)" "WAITING(w)" "|" "CANCELLED(c@)")))
+
+(setq-default org-enforce-todo-dependencies t)
+#+end_src
+
+Org mode's includes a [[https://orgmode.org/manual/Tracking-TODO-state-changes.html#FOOT44][powerful mechanism to track TODO state changes]] but we will use something simpler here. Many setups track the creation date, but I haven't found that information to be particularly actionable. It is however useful to know a task's activation date. Following [[https://www.labri.fr/perso/nrougier/GTD/index.html#org0b0e616][Nicolas Rougier]] and [[https://emacs.stackexchange.com/questions/35751/how-to-add-a-created-field-to-any-todo-task][ebpa]] we define the following function to add an /ACTIVATED/ property to the task when it first comes into the *NEXT* state:
+
+#+begin_src elisp
+(defun my/log-todo-next-creation-date (&rest ignore)
+  "Log NEXT creation time in the property drawer uder the key 'ACTIVATED"
+  (when (and (string= (org-get-todo-state) "NEXT")
+             (not (org-entry-get nil "ACTIVATED")))
+    (org-entry-put nil "ACTIVATED" (format-time-string "[%Y-%m-%d %a %H:%M]"))))
+
+(add-hook 'org-after-todo-state-change-hook #'my/log-todo-next-creation-date)
+#+end_src
+
+#+RESULTS:
+| my/log-todo-delegation-date | my/log-todo-next-creation-date |
+
+#+begin_src org
+,* NEXT Document the =hmc= class
+   :PROPERTIES:
+   :CREATED: [2022-03-26 Sun 18:45]
+   :ACTIVATED: [2022-03-28 Tue 12:03]
+   :END:
+#+end_src
+
+When waiting for someone it is always useful to know how long the task has been delegated for. We thus add a /DELEGATED/ property to the task when it comes under the /WAIT/ state. If the property already exists, it is updated:
+
+#+begin_src elisp
+(defun my/log-todo-delegation-date (&rest ignore)
+  "Log last WAIT creation time in the property drawer uder the key DELEGATED"
+  (when (string= (org-get-todo-state) "WAIT")
+    (org-entry-put nil "DELEGATED" (format-time-string "[%Y-%m-%d %a %H:%M]"))))
+
+(add-hook 'org-after-todo-state-change-hook #'my/log-todo-delegation-date)
+#+end_src
+
+#+RESULTS:
+| my/log-todo-delegation-date |
+
+#+begin_src org
+,* WAIT Document the =hmc= class
+   :PROPERTIES:
+   :CREATED: [2022-03-26 Sun 18:45]
+   :ACTIVATED: [2022-03-28 Tue 12:03]
+   :DELEGATED: [2022-03-28 Tue 14:32]
+   :END:
+#+end_src
+
+Finally we keep track of when a task was completed. This is useful which tasks were completed any given period of time, which is useful for reporting. We use Org's [[https://orgmode.org/manual/Special-Properties.html][special property]]:
+
+#+begin_src elisp
+(setq org-log-done 'time)
+#+end_src
+** A matter of time
+
+The agenda perspective allows for time-sensitive tasks as tasks are also filtered by date. Making good use of the time is key to go workflow.
+
+The *SCHEDULED* timestamp (=C-c C-s=) indicates /when you intend to do the task/. This can also be useful to prevent a task appearing in your agenda when you know it cannot be done before a certain date.
+
+The *DEADLINE* timestamp (=C-c C-d=) indicates /when a task is due/. It will continue to appear if it has not been completed after the due date.
+
+** TODO Review
+** Review :noexport:
+We can simplify the review by showing the "stuck" projects, and unfold sections down to the first *NEXT* element.
+
+* General References
+
+- David Allen, /Getting Things Done/
+- Dan Charnas, /Work Clean/
+  #+begin_quote
+As a big cooking person this book really resonated with me. Cooking is an activity that stuck with me because of its zen character: when I am in the kitchen I am fully present, vegetables get chopped, the meat gets grilled, there is very little time to think. This book made a brilliant connection between good workflow and that of the most brilliant chefs'. Good workflow is zen, whatever you are doing.
+  #+end_quote
+
+- Bert Hansen, [[http://doc.norang.ca/org-mode.html#TodoKeywords][Organize your life in plain text]]
+ #+begin_quote
+I have been using org-mode as my personal information manager for years now. I started small with just the default TODO and DONE keywords. I added small changes to my workflow and over time it evolved into what is described by this document.
+ #+end_quote
+- Nicolas Rougier, [[https://www.labri.fr/perso/nrougier/GTD/index.html#org324d463][Get things done in Emacs]]
+ #+begin_quote
+I've decided some weeks ago to (try to) adopt the method of David Allen named "Get Things Done" (GTD). A lot of people were giving very positive feedback about this method and there are a lot of related resources online, including several Emacs/org-mode setup. This helped me a lot to design my own setup since I did not read the book
+ #+end_quote
